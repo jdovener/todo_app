@@ -17,6 +17,10 @@ def index():
     print(todo_list)
     return render_template('base.html', todo_list=todo_list)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route("/add", methods=["POST"])
 def add():
     title = request.form.get("title")
